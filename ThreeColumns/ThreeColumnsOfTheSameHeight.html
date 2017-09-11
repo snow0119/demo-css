@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列等高</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .header, .footer{
+            width: 960px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background-color: #aaa;
+        }
+
+        .container {
+            float: left;
+            width: 960px;
+            color: #ffffff;
+            text-align: center;
+            background: url("../img/bg.png") repeat-y 0 0;
+            background-size: cover;
+        }
+
+        .mainBox {
+            float: left;
+            width: 960px;
+        }
+
+        .mainBox .content{
+            width: 440px;
+            margin: 0 210px 0 310px;
+            color: #000;
+        }
+
+        .subMainBox{
+            float: left;
+            width: 300px;
+            margin-left: -960px;
+        }
+
+        .sideBox {
+            float: left;
+            width: 200px;
+            margin-left: -200px;
+        }
+
+        .footer{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="header">头部信息</div>
+<div class="container">
+    <div class="mainBox">
+        <div class="content">主要内容区域</div>
+    </div>
+    <div class="subMainBox">次要内容区域</div>
+    <div class="sideBox">侧边栏</div>
+</div>
+<div class="footer">底部信息</div>
+</body>
+</html>
