@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>三列等高</title>
     <style type="text/css">
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
 
-        .header, .footer{
+        .header, .footer {
             width: 960px;
             height: 30px;
             line-height: 30px;
@@ -22,46 +22,68 @@
             float: left;
             width: 960px;
             color: #ffffff;
-            text-align: center;
+            /*text-align: center;*/
             /* 背景模拟*/
-            background: url("../img/bg.png") repeat-y 0 0;
-            background-size: cover;
+            /*background: url("../img/bg.png") repeat-y 0 0;*/
+            /*background-size: cover;*/
 
-            overflow: hidden;
+            /* 负边距*/
+            /*overflow: hidden;*/
+
+            /*边框模拟*/
+            position: relative;
         }
 
         .mainBox {
-            float: left;
+            /*float: left;*/
             width: 960px;
-            margin-bottom: -9999px;
-            padding-bottom: 9999px;
+            /* 负边距*/
+            /*margin-bottom: -9999px;*/
+            /*padding-bottom: 9999px;*/
         }
 
-        .mainBox .content{
-            width: 440px;
-            margin: 0 210px 0 310px;
+        .mainBox .content {
+            /*width: 440px;*/
+            /*margin: 0 210px 0 310px;*/
             background-color: #000;
+
+            /*负边距*/
+            border-left: 310px solid #999999;
+            border-right: 210px solid #333333;
         }
 
-        .subMainBox{
-            float: left;
+        .subMainBox {
+            /*float: left;*/
             width: 300px;
-            margin-left: -960px;
-            margin-bottom: -9999px;
-            padding-bottom: 9999px;
-            background-color: #666666;
+            /*margin-left: -960px;*/
+
+            /* 负边距*/
+            /*margin-bottom: -9999px;*/
+            /*padding-bottom: 9999px;*/
+            /*background-color: #666666;*/
+
+            /*边框模拟*/
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .sideBox {
-            float: left;
+            /*float: left;*/
             width: 200px;
-            margin-left: -200px;
-            margin-bottom: -9999px;
-            padding-bottom: 9999px;
-            background-color: #666666;
+            /*margin-left: -200px;*/
+            /* 负边距*/
+            /*margin-bottom: -9999px;*/
+            /*padding-bottom: 9999px;*/
+            /*background-color: #666666;*/
+
+            /*边框模拟*/
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
-        .footer{
+        .footer {
             clear: both;
         }
     </style>
