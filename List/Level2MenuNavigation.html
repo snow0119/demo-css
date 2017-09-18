@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级菜单导航</title>
+    <style>
+        body {
+            font: normal 12px/1.5em "宋体";
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0;
+            list-style: none;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        #nav li {
+            width: 149px;
+            float: left;
+            position: relative;
+        }
+
+        #nav li ul {
+            display: none;
+            position: absolute;
+            top: 29px;
+        }
+
+        ul li a {
+            display: block;
+            height: 100%;
+            padding: 5px;
+            text-decoration: none;
+            color: #777;
+            border: 1px solid #cccccc;
+            border-bottom: 0 none;
+            background: #ffffff;
+        }
+
+        #nav li:hover ul {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="nav">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">关于我们</a>
+        <ul>
+            <li><a href="#">我们的故事</a></li>
+            <li><a href="#">我们的团队</a></li>
+        </ul>
+    </li>
+    <li><a href="#">我们的服务</a>
+        <ul>
+            <li><a href="#">网页设计</a></li>
+            <li><a href="#">页面制作</a></li>
+            <li><a href="#">程序开发</a></li>
+        </ul>
+    </li>
+    <li><a href="#">联系我们</a>
+        <ul>
+            <li><a href="#">团队主力</a></li>
+            <li><a href="#">团队成员</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
