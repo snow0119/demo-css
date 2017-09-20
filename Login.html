@@ -3,6 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>登录框</title>
+    <style>
+        .user-login {
+            width: 230px;
+            padding: 1px;
+            border: 1px solid #dbdbd0;
+            background-color: #ffffff;
+        }
+
+        .user-login * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .user-login h3 {
+            height: 24px;
+            line-height: 24px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #eeeee8;
+        }
+
+        .user-login .content {
+            padding: 5px;
+        }
+
+        .user-login .form-item {
+            margin-bottom: 5px;
+        }
+
+        .user-login .form-item label {
+            cursor: pointer;
+        }
+
+        .user-login .userName label, .user-login .userPsw label, .user-login .validate label {
+            width: 64px;
+            display: inline-block;
+        }
+
+        .user-login .userName input, .user-login .userPsw input, .user-login .validate input {
+            width: 146px;
+            height: 17px;
+            padding: 3px 2px 0;
+            border: 1px solid #a9a98d;
+        }
+
+        .user-login .validate input {
+            width: 36px;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .user-login .keepLogin {
+            padding-left: 67px;
+        }
+
+        .user-login .keepLogin label, .user-login .keepLogin input {
+            vertical-align: middle;
+        }
+
+        .user-login .btn {
+            text-align: center;
+        }
+
+        .user-login .btn a {
+            padding: 3px 4px 2px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .user-login .btn button {
+            height: 21px;
+            cursor: pointer;
+        }
+
+        .user-login .btn a, .user-login .btn button {
+            border: 1px solid #a9a98d;
+        }
+    </style>
 </head>
 <body>
 <div class="user-login">
@@ -14,7 +92,7 @@
                 <input type="text" id="userName"/>
             </div>
             <div class="form-item userPsw">
-                <label for="userPsw">密码：</label>
+                <label for="userPsw">密 &nbsp; 码：</label>
                 <input type="text" id="userPsw"/>
             </div>
             <div class="form-item validate">
