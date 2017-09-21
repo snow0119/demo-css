@@ -6,6 +6,7 @@
     <style>
         table {
             width: 300px;
+            border-collapse: collapse;
             border: 1px solid #000000;
         }
 
@@ -15,22 +16,72 @@
 
         th{
             color: #f4f4f4;
+            border: 1px solid #000000;
             background-color: #999999;
         }
 
         td{
             text-align: center;
+            border: 1px solid #000000;
             background-color: #e8e8e8;
         }
+
+        tfoot td {
+            text-align: right;
+            background-color: #ffffff;
+        }
+
+        tr td {
+            background-color: #e8e8e8;
+        }
+
+        .tr-bg2 td {
+            background-color: #cdcdcd;
+        }
+
+        /*tr+tr td {*/
+            /*background-color: #cdcdcd;*/
+        /*}*/
+        /*tr+tr+tr td {*/
+            /*background-color: #e8e8e8;*/
+        /*}*/
+
+        /*tr+tr+tr+tr td {*/
+            /*background-color: #cdcdcd;*/
+        /*}*/
+
+        /*tr+tr+tr+tr+tr td {*/
+            /*background-color: #e8e8e8;*/
+        /*}*/
+
+        /*tr+tr+tr+tr+tr+tr td {*/
+            /*background-color: #cdcdcd;*/
+        /*}*/
+
+        colgroup {
+            width: 180px;
+            color: #ff0000;
+        }
+
+        /*tr>td {*/
+        /*color: #000000;*/
+        /*}*/
+
+        /*tr>td+td {*/
+        /*color: #ff0000;*/
+        /*}*/
+
     </style>
 </head>
 <body>
 <table>
     <caption>表头信息</caption>
+    <colgroup span="4"></colgroup>
+    <colgroup span="2"></colgroup>
     <thead>
     <tr>
-        <td>表格标题</td>
-        <td>表格标题</td>
+        <th>表格标题</th>
+        <th>表格标题</th>
     </tr>
     </thead>
     <tfoot>
@@ -39,15 +90,27 @@
     </tr>
     </tfoot>
     <tbody>
-    <tr>
+    <tr class="tr-bg1">
         <td>表格内容单元格A</td>
         <td>表格内容单元格B</td>
     </tr>
-    <tr>
+    <tr class="tr-bg2">
         <td>表格内容单元格C</td>
         <td>表格内容单元格D</td>
     </tr>
-    <tr>
+    <tr class="tr-bg1">
+        <td>表格内容单元格E</td>
+        <td>表格内容单元格F</td>
+    </tr>
+    <tr class="tr-bg2">
+        <td>表格内容单元格A</td>
+        <td>表格内容单元格B</td>
+    </tr>
+    <tr class="tr-bg1">
+        <td>表格内容单元格C</td>
+        <td>表格内容单元格D</td>
+    </tr>
+    <tr class="tr-bg2">
         <td>表格内容单元格E</td>
         <td>表格内容单元格F</td>
     </tr>
