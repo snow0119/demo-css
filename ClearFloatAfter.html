@@ -1,0 +1,60 @@
+<style type="text/css">
+    p:before {
+        color: #ff0000;
+        content: '标签之前的文字';
+    }
+
+    p:after {
+        color: #0000ff;
+        content: '标签之前的文字';
+    }
+
+    .float-box {
+        zoom: 1;
+        background-color: #aaaaaa;
+    }
+
+    .no-float {
+        color: #ffffff;
+        background-color: #000000;
+    }
+
+    .float-box:after {
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+        line-height: 0;
+        content: "";
+    }
+
+    .clearFix:after {
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+        line-height: 0;
+        content: "";
+    }
+
+    .clearFix {
+        zoom: 1;
+    }
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动 错位</title>
+</head>
+<body>
+<p>标签内部的文字</p>
+
+<div class="float-box clearFix">
+    <div class="float-left">左浮动元素</div>
+    <div class="float-right">右浮动元素</div>
+</div>
+<div class="no-float">测试因浮动导致该容器所处的位置</div>
+</body>
+</html>

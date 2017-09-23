@@ -1,0 +1,45 @@
+<style type="text/css">
+    .float-left {
+        float: left;
+        width: 200px;
+        height: 100px;
+        border: 2px solid #ff0000;
+    }
+
+    .float-right {
+        float: right;
+        width: 200px;
+        height: 100px;
+        border: 2px solid #0000ff;
+    }
+
+    .float-box {
+        overflow: hidden;
+        zoom: 1;
+        background-color: #aaaaaa;
+    }
+
+    .no-float {
+        color: #ffffff;
+        background-color: #000000;
+    }
+
+    .clear-float {
+        clear: both;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动 错位</title>
+</head>
+<body>
+<div class="float-box">
+    <div class="float-left">左浮动元素</div>
+    <div class="float-right">右浮动元素</div>
+    <br class="clear-float">
+</div>
+<div class="no-float">测试因浮动导致该容器所处的位置</div>
+</body>
+</html>
