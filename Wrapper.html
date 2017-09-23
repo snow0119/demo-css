@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的幻灯片</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333333;
+            background-color: #cccccc;
+        }
+
+        .content {
+            width: 180px;
+            height: 160px;
+            margin: 10px auto 0;
+            overflow: hidden;
+            border: 1px solid #999999;
+            background: #ffffff;
+        }
+
+        .box {
+            float: left;
+            width: 160px;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .pager {
+            width: 180px;
+            height: 20px;
+            margin: 5px auto;
+            text-align: right;
+        }
+
+        .pager a {
+            padding: 2px 4px;
+            text-decoration: none;
+            color: #ffffff;
+            background: #ff0000;
+        }
+
+        .pager a:hover {
+            color: #000000;
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <div class="box" id="a1">
+            <h2>幻灯片的简单模拟</h2>
+            <p>第一屏</p>
+        </div>
+        <div class="box" id="a2">
+            <p>第二屏</p>
+        </div>
+        <div class="box" id="a3">
+            <p>第三屏</p>
+        </div>
+        <div class="box" id="a4">
+            <p>第四屏</p>
+        </div>
+        <div class="box" id="a5">
+            <p>第五屏</p>
+            <p>第五屏</p>
+            <p>第五屏</p>
+            <p>第五屏</p>
+            <p>第五屏</p>
+            <p>第五屏</p>
+            <p>第五屏</p>
+            <p>第五屏</p>
+        </div>
+    </div>
+
+    <div class="pager">
+        <a href="#a1">1</a>
+        <a href="#a2">2</a>
+        <a href="#a3">3</a>
+        <a href="#a4">4</a>
+        <a href="#a5">5</a>
+    </div>
+</div>
+</body>
+</html>
