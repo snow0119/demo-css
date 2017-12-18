@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function startRun() {
+        var i = 0;
+        function tim() {
+            if (i < 100) {
+                i++;
+                update(i)
+            }
+        }
+        setInterval(tim, 100)
+    }
+
+    function update(i) {
+        var p = document.getElementById("p");
+        p.value = i
+        var span = p.getElementsByTagName("span")[0]
+        span.textContent = i
+    }
+</script>
+<section>
+    进度条
+    <p><progress id="p" style="background-color: #0000ff" min="0" max="100"><span>0</span>%</progress></p>
+    <input type="button" value="start" onclick="startRun()">
+</section>
+</body>
+</html>
