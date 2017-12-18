@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rangeObj</title>
+</head>
+<body>
+<script>
+    function deleteNodeContents(type) {
+        var contain = document.getElementById("contain")
+        var rangeObj = document.createRange();
+        if(type){
+            rangeObj.selectNodeContents(contain)
+            rangeObj.deleteContents()
+        }else {
+            rangeObj.selectNode(contain)
+            rangeObj.deleteContents()
+        }
+    }
+</script>
+<div id="contain" style="background-color: pink;width: 300px;height: 80px"> range 对象</div>
+<input type="button" value="删除内容" onclick="deleteNodeContents(true)">
+<input type="button" value="删除元素" onclick="deleteNodeContents(false)">
+</body>
+</html>

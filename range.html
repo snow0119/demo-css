@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>range对象</title>
+</head>
+<body>
+<script>
+    function selectText() {
+        var html;
+        var showRange = document.getElementById("showRange")
+        var section = document.getSelection()
+        if (section.rangeCount > 0)
+            html = `你选中了${section.rangeCount}个对象<br/>`
+        for (var i = 0; i < section.rangeCount; i++) {
+            html += `您选中的第${i + 1}段内容是:${section.getRangeAt(i)}<br/>`
+        }
+        showRange.innerHTML = html;
+    }
+
+</script>
+section对象与range对象使用
+<input type="button" value="确定" onclick="selectText()">
+<div id="showRange"></div>
+</body>
+</html>
