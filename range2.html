@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function deleteContent() {
+            var aim = document.getElementById("text")
+            var rangeObj = document.createRange()
+            var t = aim.firstChild
+            rangeObj.setStart(t,0)
+            rangeObj.setEnd(t,3)
+            rangeObj.deleteContents();
+        }
+    </script>
+    <div id="text">
+        这是一段用来删除的文字
+    </div>
+    <button onclick="deleteContent()">删除</button>
+
+</body>
+</html>
