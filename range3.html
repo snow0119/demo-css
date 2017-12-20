@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function deleteRow() {
+        var table = document.getElementById("tableText")
+        if(table.rows.length > 0){
+            var row = table.rows[0]
+            var rangeObj = document.createRange()
+            rangeObj.setStartBefore(row)
+            rangeObj.setEndAfter(row)
+            rangeObj.deleteContents();
+        }
+    }
+</script>
+<table id="tableText" border="1">
+    <tr>
+        <td>第一行第一列</td>
+        <td>第一行第二列</td>
+    </tr>
+    <tr>
+        <td>第二行第一列</td>
+        <td>第二行第二列</td>
+    </tr>
+    <tr>
+        <td>第san行第一列</td>
+        <td>第san行第二列</td>
+    </tr>
+</table>
+<button onclick="deleteRow()">删除一行</button>
+</body>
+</html>
