@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流布局</title>
+    <style type="text/css">
+        body, html {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #d08b8b;
+            font-family: "PT Mono", monospace;
+        }
+
+        .masonry {
+            column-count: 3;
+            column-gap: 0;
+            counter-reset: item-counter;
+        }
+
+        @media (min-width: 400px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .masonry {
+                column-count: 4;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            .masonry {
+                column-count: 5;
+            }
+        }
+
+        .item {
+            box-sizing: border-box;
+            break-inside: avoid;
+            padding: 10px;
+            counter-increment: item-counter;
+        }
+
+        .item-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 220px;
+            font-size: 40px;
+            box-sizing: border-box;
+            background-color: #222;
+            content: counter(item-counter);
+            color: #d6d495;
+        }
+
+        .item-content:hover {
+            background-color: #d6d495;
+            opacity: 0.6;
+        }
+
+        .item-content:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 13px;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            font-weight: bold;
+            content: counter(item-counter);
+        }
+
+        .item-content:after {
+            content: 'ಠ‿ಠ';
+        }
+
+        .item-content-small {
+            height: 100px;
+            color: green;
+        }
+
+        .item-content-small:hover {
+            background-color: green;
+            opacity: 0.6;
+        }
+
+        .item-content-small:after {
+            content: '♥◡♥';
+        }
+
+        .item-content-medium {
+            height: 175px;
+            color: beige;
+        }
+
+        .item-content-medium:hover {
+            background-color: beige;
+            opacity: 0.6;
+        }
+
+        .item-content-medium:after {
+            content: '◔ᴗ◔';
+        }
+
+        .item-content-large {
+            height: 280px;
+            color: cornflowerblue;
+        }
+
+        .item-content-large:hover {
+            background-color: cornflowerblue;
+            opacity: 0.6;
+        }
+
+        .item-content-large:after {
+            content: 'ಠ_๏';
+        }
+    </style>
+</head>
+<body>
+<div class="masonry">
+    <div class="item">
+        <div class="item-content item-content-medium"></div>
+    </div>
+    <div class="item">
+        <div class="item-content item-content-large"></div>
+    </div>
+    <div class="item">
+        <div class="item-content"></div>
+    </div>
+    <div class="item">
+        <div class="item-content item-content-small"></div>
+    </div>
+    <div class="item">
+        <div class="item-content"></div>
+    </div>
+    <div class="item">
+        <div class="item-content item-content-medium"></div>
+    </div>
+    <div class="item">
+        <div class="item-content item-content-large"></div>
+    </div>
+    <div class="item">
+        <div class="item-content"></div>
+    </div>
+    <div class="item">
+        <div class="item-content item-content-small"></div>
+    </div>
+    <div class="item">
+        <div class="item-content"></div>
+    </div>
+    <div class="item">
+        <div class="item-content item-content-large"></div>
+    </div>
+    <div class="item">
+        <div class="item-content"></div>
+    </div>
+</div>
+</body>
+</html>
